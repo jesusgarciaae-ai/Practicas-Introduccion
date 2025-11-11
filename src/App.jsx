@@ -3,27 +3,7 @@ import Modulo1 from "./Componentes/Ejercicios Modulo 6/Ejercicio 1 2 y 3/Introdu
 import Menu from "./Componentes/Ejercicios Modulo 6/Ejercicio 1 2 y 3";
 import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 
-const Hello = (props) => {
-  return (
-    <div>
-      <p>
-        Hello {props.name}, you are {props.age} years old
-      </p>
-    </div>
-  );
-};
-
 const App = () => {
-  // const name = "Peter";
-  // const age = 10;
-
-  // return (
-  //   <div className="container">
-  //     <h1>Greetings</h1>
-  //     <Hello name="Jesus Garcia" age={10 + 11} />
-  //     <Hello name={name} age={age} />
-  //   </div>
-  // );
   return (
     <BrowserRouter>
       <Navbar />
