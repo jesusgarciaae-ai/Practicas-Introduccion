@@ -41,10 +41,22 @@ const Menu = () => {
           <div className="col">
             <Titulo title="Introducción" />
             <Card
-              title="Ejercicio 1 al 3"
+              title="Ejercicio 1.1 al 1.3"
               text="Crear aplicación y mostrar información personal, aplicación  en React que realice diferentes cálculos curiosos basados en tu información personal.
           El objetivo es crear un dashboard personal dinámico, mostrando información que cambia en tiempo real o según la fecha."
               to="/modulo1"
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <Titulo title="Componentes" />
+            <Card
+              title=" Ejercicio 2.1 - Tarjeta de Presentación"
+              text="El ejercicio 2.1 consiste en crear una tarjeta de presentación usando React, separando la interfaz en cuatro
+              componentes: Header (nombre y título profesional), About (descripción personal), 
+              Contact (correo, LinkedIn, teléfono y ubicación) y Footer (año actual con new Date().getFullYear()). El objetivo es practicar la organización y composición de componentes mostrando información personal de forma ordenada."
+              to="/ej2.1"
             />
           </div>
         </div>

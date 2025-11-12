@@ -2,6 +2,7 @@ import Back from "../../Back";
 import MensajeHoras from "../../../Mensajes/mensajeHoras";
 import Countdown from "react-countdown";
 import { useState, useEffect } from "react";
+import DivisorSeccion from "../../divisorSeccion";
 
 const datos = {
   nombre: "Jesús Javier García Andrade",
@@ -312,6 +313,7 @@ const Modulo1 = () => {
     <>
       <div className="container mt-3">
         <Back />
+        <DivisorSeccion titulo="Ejercicios 1.1 , 1.2 y 1.3" />
         <Bienvenida />
         <Datospersonales />
         <br />

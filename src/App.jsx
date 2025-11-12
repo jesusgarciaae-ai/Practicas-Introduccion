@@ -1,5 +1,6 @@
 import React from "react";
 import Modulo1 from "./Componentes/Ejercicios Modulo 6/Ejercicio 1 2 y 3/Introducción";
+import Ej21 from "./Componentes/Ejercicios Modulo 6/Tema2_Componentes/ejercicio21";
 import Menu from "./Componentes/Ejercicios Modulo 6/Ejercicio 1 2 y 3";
 import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 
@@ -15,6 +16,7 @@ const App = () => {
         />
         <Route path="/modulo1" element={<Modulo1 />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/ej2.1" element={<Ej21 />} />
       </Routes>
     </BrowserRouter>
   );
