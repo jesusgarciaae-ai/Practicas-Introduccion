@@ -38,8 +38,8 @@ const Menu = () => {
       <Back />
       <div className="container text-center">
         <div className="row">
+          <Titulo title="Introducción" />
           <div className="col">
-            <Titulo title="Introducción" />
             <Card
               title="Ejercicio 1.1 al 1.3"
               text="Crear aplicación y mostrar información personal, aplicación  en React que realice diferentes cálculos curiosos basados en tu información personal.
@@ -49,14 +49,25 @@ const Menu = () => {
           </div>
         </div>
         <div className="row">
+          <Titulo title="Componentes" />
           <div className="col">
-            <Titulo title="Componentes" />
             <Card
               title=" Ejercicio 2.1 - Tarjeta de Presentación"
               text="El ejercicio 2.1 consiste en crear una tarjeta de presentación usando React, separando la interfaz en cuatro
               componentes: Header (nombre y título profesional), About (descripción personal), 
               Contact (correo, LinkedIn, teléfono y ubicación) y Footer (año actual con new Date().getFullYear()). El objetivo es practicar la organización y composición de componentes mostrando información personal de forma ordenada."
               to="/ej2.1"
+            />
+          </div>
+          <div className="col">
+            <Card
+              title=" Ejercicio 2.2 - Portafolio Modular"
+              text="El ejercicio 2.2 consiste en crear un portafolio modular en React utilizando varios componentes dentro del mismo
+               archivo. Debes incluir un NavBar con menú de navegación, un componente ProjectCard para mostrar tres proyectos usando
+                .map(), un componente SkillBadge para listar al menos cinco habilidades y un componente SocialLinks con enlaces a redes
+                 sociales. El objetivo es practicar la reutilización de componentes especializados y el renderizado dinámico de listas
+                  a partir de datos."
+              to="/ej2.2"
             />
           </div>
         </div>
