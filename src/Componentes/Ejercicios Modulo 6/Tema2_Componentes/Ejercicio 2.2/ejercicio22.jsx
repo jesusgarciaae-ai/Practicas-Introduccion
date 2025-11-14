@@ -5,6 +5,10 @@ import Skills from "./Skills";
 import Redes from "./redes";
 import { useState } from "react";
 
+import DivisorSeccion from "../../../divisorSeccion";
+import Footer from "../../../Footer";
+import Ej22Cod from "../mostrarCodigos/ejercicio22Cod";
+
 const NavBar = ({ setComponente }) => {
   const handleClick = (nomComponente) => (e) => {
     setComponente(nomComponente);
@@ -78,6 +82,11 @@ const NavBar = ({ setComponente }) => {
 
 const Ej22 = () => {
   const [componente, setComponente] = useState("Inicio");
+  const [codigo, setCodigo] = useState(false);
+
+  const verCodigo = () => {
+    setCodigo(!codigo);
+  };
 
   const renderizarComponente = () => {
     switch (componente) {
@@ -90,7 +99,7 @@ const Ej22 = () => {
       case "Redes":
         return <Redes />;
       default:
-        return <Inicio />; // Valor por defecto
+        return <Inicio />;
     }
   };
 
@@ -102,7 +111,28 @@ const Ej22 = () => {
         <NavBar setComponente={setComponente} />
         <br />
         <div id="Content">{renderizarComponente()}</div>
+        <br />
+        <DivisorSeccion titulo="Código" />
+        <button
+          onClick={verCodigo}
+          className={`btn btn-${codigo ? "secondary" : "primary"}`}
+        >
+          {codigo ? "Ocultar Código" : "Ver Código"}
+        </button>
+        {codigo && (
+          <div className="codigo">
+            <Ej22Cod />
+          </div>
+        )}
       </div>
+      <br />
+      <Footer
+        titulo="Ejercicio 2.2"
+        descripcion="El ejercicio 2.2 consiste en crear un portafolio modular
+       en React utilizando varios componentes dentro del mismo archivo. El objetivo es practicar la reutilización
+        de componentes especializados y el renderizado dinámico de listas a partir de datos."
+        requisitos="NavBar con menú de navegación - Componente ProjectCard para mostrar tres proyectos - Componente SkillBadge para listar al menos cinco habilidades - Componente SocialLinks con enlaces a redes sociales. "
+      />
     </>
   );
 };
