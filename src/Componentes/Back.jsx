@@ -1,10 +1,10 @@
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 
-const Back = () => {
+const Back = (props) => {
   const navigate = useNavigate();
   const handleBack = () => {
-    navigate(-1);
+    navigate(props.to);
   };
 
   return (

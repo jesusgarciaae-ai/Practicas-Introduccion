@@ -179,7 +179,7 @@ const Ej21 = () => {
         </div>
       </div>
       <div className="container">
-        <table class="table">
+        <table className="table">
           <tr>
             <td>
               <About />

@@ -3,7 +3,7 @@ import DivisorSeccion from "../../divisorSeccion";
 import Ej21Cod from "./mostrarCodigos/ejercicio21Cod";
 import Footer from "../../Footer";
 
-const datos = {
+export const datos = {
   nombre: "Jesús Javier García Andrade",
   email: "jesusho508@gmail.com",
   tel: "6441986785",
@@ -13,7 +13,7 @@ const datos = {
   universidad: "La Salle Noroeste",
 };
 
-const aboutMe = {
+export const aboutMe = {
   descipcion: "programación, el ejercicio y mascotas",
   gustos: "musica, arte, pintura, naturaleza",
 };
@@ -41,7 +41,7 @@ const Mes = () => {
   return mes;
 };
 
-const DiaSemana = () => {
+export const DiaSemana = () => {
   let dia = "";
   switch (fecha.getDay()) {
     case 1:
@@ -68,11 +68,11 @@ const DiaSemana = () => {
   return dia;
 };
 
-const Header = () => {
+export const Header = (props) => {
   return (
     <>
-      <p className="fs-1">{datos.nombre}</p>
-      <p className="f2-4">{datos.tituloProf}</p>
+      <p className="fs-1">{props.nombre}</p>
+      <p className="f2-4">{props.tituloProf}</p>
       <hr />
     </>
   );
@@ -81,7 +81,6 @@ const Header = () => {
 const About = () => {
   return (
     <>
-      <table className="table"></table>
       <p className="fw-bold fs-3">About me: </p>
       <p>
         Soy estudiante de la Universisdad {datos.universidad} en {datos.ciudad}{" "}
@@ -121,10 +120,10 @@ const Ej21 = () => {
   return (
     <div>
       <div style={{ background: "#3a3942ff" }}>
-        <Back />
+        <Back to="/menu" />
         <div className="container">
           <span className=" text-light">
-            <Header />
+            <Header nombre={datos.nombre} tituloProf={datos.tituloProf} />
           </span>
         </div>
       </div>
@@ -147,7 +146,7 @@ const Ej21 = () => {
         <Ej21Cod />
       </div>
       <Footer
-        titulo="El ejercicio 2.1 "
+        titulo="Ejercicio 2.1 "
         descripcion="consiste en crear una tarjeta de presentación usando React, separando la
          interfaz en cuatro componentes: Header (nombre y título profesional), About (descripción personal), Contact
           (correo, LinkedIn, teléfono y ubicación) y Footer (año actual con new Date().getFullYear()). El objetivo es practicar la organización y composición de componentes mostrando información personal de forma ordenada."

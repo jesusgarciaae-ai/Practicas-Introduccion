@@ -312,7 +312,7 @@ const Modulo1 = () => {
   return (
     <>
       <div className="container mt-3">
-        <Back />
+        <Back to="/menu" />
         <DivisorSeccion titulo="Ejercicios 1.1 , 1.2 y 1.3" />
         <Bienvenida />
         <Datospersonales />
