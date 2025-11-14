@@ -1,7 +1,9 @@
-import Back from "../../Back";
-import DivisorSeccion from "../../divisorSeccion";
-import Ej21Cod from "./mostrarCodigos/ejercicio21Cod";
-import Footer from "../../Footer";
+import { useState } from "react";
+
+import Back from "../../../Back";
+import DivisorSeccion from "../../../divisorSeccion";
+import Ej21Cod from "../mostrarCodigos/ejercicio21Cod";
+import Footer from "../../../Footer";
 
 export const datos = {
   nombre: "Jesús Javier García Andrade",
@@ -117,6 +119,12 @@ const Footerej2 = () => {
 };
 
 const Ej21 = () => {
+  const [codigo, setCodigo] = useState(false);
+
+  const verCodigo = () => {
+    setCodigo(!codigo);
+  };
+
   return (
     <div>
       <div style={{ background: "#3a3942ff" }}>
@@ -143,8 +151,19 @@ const Ej21 = () => {
         <Footerej2 />
         <br />
         <DivisorSeccion titulo="Código" />
-        <Ej21Cod />
+        <button
+          onClick={verCodigo}
+          className={`btn btn-${codigo ? "secondary" : "primary"}`}
+        >
+          {codigo ? "Ocultar Código" : "Ver Código"}
+        </button>
+        {codigo && (
+          <div className="codigo">
+            <Ej21Cod />
+          </div>
+        )}
       </div>
+      <br />
       <Footer
         titulo="Ejercicio 2.1 "
         descripcion="consiste en crear una tarjeta de presentación usando React, separando la

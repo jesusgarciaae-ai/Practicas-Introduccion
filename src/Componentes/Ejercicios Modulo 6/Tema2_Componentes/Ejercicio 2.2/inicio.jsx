@@ -1,4 +1,4 @@
-import { Header, datos, aboutMe } from "../ejercicio21";
+import { Header, datos, aboutMe } from "../Ejercicio 2.1/ejercicio21";
 
 const Inicio = () => {
   return (

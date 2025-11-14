@@ -1,8 +1,9 @@
 import React from "react";
-import Modulo1 from "./Componentes/Ejercicios Modulo 6/Ejercicio 1 2 y 3/Introducción";
-import Ej21 from "./Componentes/Ejercicios Modulo 6/Tema2_Componentes/ejercicio21";
+import Modulo1 from "./Componentes/Ejercicios Modulo 6/Tema1_Introducción/Introducción";
+import Ej21 from "./Componentes/Ejercicios Modulo 6/Tema2_Componentes/Ejercicio 2.1/ejercicio21";
 import Ej22 from "./Componentes/Ejercicios Modulo 6/Tema2_Componentes/Ejercicio 2.2/ejercicio22";
-import Menu from "./Componentes/Ejercicios Modulo 6/Ejercicio 1 2 y 3";
+import Ej23 from "./Componentes/Ejercicios Modulo 6/Tema2_Componentes/Ejercicio 2.3/indexEj23";
+import Menu from "./Componentes/Ejercicios Modulo 6/Tema1_Introducción";
 import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/menu" element={<Menu />} />
         <Route path="/ej2.1" element={<Ej21 />} />
         <Route path="/ej2.2" element={<Ej22 />} />
+        <Route path="/ej2.3" element={<Ej23 />} />
       </Routes>
     </BrowserRouter>
   );

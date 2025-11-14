@@ -67,6 +67,14 @@ const Menu = () => {
               to="/ej2.2"
             />
           </div>
+          <div className="col">
+            <Card
+              title="Ejercicio 2.3: Sistema de Componentes Anidados"
+              text="El ejercicio 2.3 avanzado. Consiste en crear un sistema de componentes anidados en React. 
+              El proyecto debe lograr al menos seis niveles de anidación, demostrando comunicación y estructura compleja entre componentes."
+              to="/ej2.3"
+            />
+          </div>
         </div>
       </div>
     </div>
