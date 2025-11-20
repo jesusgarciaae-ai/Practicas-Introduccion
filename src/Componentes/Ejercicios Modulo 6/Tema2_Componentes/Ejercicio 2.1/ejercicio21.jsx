@@ -118,6 +118,12 @@ const Footerej2 = () => {
   );
 };
 
+const listaRequisitos = [
+  "Componente Header con tu nombre y título profesional",
+  "Componente About con descripción personal",
+  "Componente Contact con tu información de contacto",
+  "Componente Footer con el año actual",
+];
 const Ej21 = () => {
   const [codigo, setCodigo] = useState(false);
 
@@ -169,7 +175,7 @@ const Ej21 = () => {
         descripcion="consiste en crear una tarjeta de presentación usando React, separando la
          interfaz en cuatro componentes: Header (nombre y título profesional), About (descripción personal), Contact
           (correo, LinkedIn, teléfono y ubicación) y Footer (año actual con new Date().getFullYear()). El objetivo es practicar la organización y composición de componentes mostrando información personal de forma ordenada."
-        requisitos="Componente Header con tu nombre y título profesional - Componente About con descripción personal - Componente Contact con tu información de contacto - Componente Footer con el año actual"
+        requisitos={listaRequisitos}
       />
     </div>
   );

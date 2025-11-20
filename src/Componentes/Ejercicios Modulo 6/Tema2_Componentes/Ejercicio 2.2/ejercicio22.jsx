@@ -79,7 +79,13 @@ const NavBar = ({ setComponente }) => {
     </nav>
   );
 };
-
+const listaRequisitos = [
+  "Componente NavBar con menú de navegación",
+  "Componente ProjectCard para mostrar proyectos (úsalo 3 veces)",
+  "Componente SkillBadge para habilidades (úsalo 5+ veces)",
+  "Componente SocialLinks con enlaces a redes sociales",
+  "Todos los componentes deben estar en el mismo archivo",
+];
 const Ej22 = () => {
   const [componente, setComponente] = useState("Inicio");
   const [codigo, setCodigo] = useState(false);
@@ -131,7 +137,7 @@ const Ej22 = () => {
         descripcion="El ejercicio 2.2 consiste en crear un portafolio modular
        en React utilizando varios componentes dentro del mismo archivo. El objetivo es practicar la reutilización
         de componentes especializados y el renderizado dinámico de listas a partir de datos."
-        requisitos="NavBar con menú de navegación - Componente ProjectCard para mostrar tres proyectos - Componente SkillBadge para listar al menos cinco habilidades - Componente SocialLinks con enlaces a redes sociales. "
+        requisitos={listaRequisitos}
       />
     </>
   );
