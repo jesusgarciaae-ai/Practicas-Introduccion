@@ -4,7 +4,7 @@ import Back from "../../Back";
 const Titulo = (props) => {
   return (
     <>
-      <p className="fs-2">{props.title}</p>
+      <p className="fs-2 mt-4">{props.titulo}</p>
     </>
   );
 };
@@ -19,12 +19,12 @@ const Card = (props) => {
   return (
     <div className="col">
       <div
-        className="card mt-4"
+        className="card"
         onClick={handleRedirect}
         style={{ cursor: "pointer" }}
       >
         <div className="card-body">
-          <h5 className="card-title">{props.title}</h5>
+          <h5 className="card-title">{props.titulo}</h5>
           <p className="card-text">{props.text}</p>
         </div>
       </div>
@@ -37,42 +37,47 @@ const Menu = () => {
     <div className="container">
       <Back to="/" />
       <div className="container text-center">
-        <div className="row">
-          <Titulo title="Introducción" />
+        <div className="row ">
+          <Titulo titulo="Introducción" />
           <div className="col">
             <Card
-              title="Ejercicio 1.1 al 1.3"
-              text="Crear aplicación y mostrar información personal, aplicación  en React que realice diferentes cálculos curiosos basados en tu información personal.
-          El objetivo es crear un dashboard personal dinámico, mostrando información que cambia en tiempo real o según la fecha."
+              titulo="Ejercicio 1.1 al 1.3"
+              text="Crear aplicación y mostrar información personal"
               to="/modulo1"
             />
           </div>
         </div>
-        <div className="row">
-          <Titulo title="Componentes" />
+        <div className="row ">
+          <Titulo titulo="Componentes" />
           <div className="col">
             <Card
-              title=" Ejercicio 2.1 - Tarjeta de Presentación"
-              text="El ejercicio 2.1 consiste en crear una tarjeta de presentación usando React, separando la interfaz en cuatro
-              componentes. El objetivo es practicar la organización y composición de componentes mostrando información personal de forma ordenada."
+              titulo=" Ejercicio 2.1 - Tarjeta de Presentación"
+              text="Crear una tarjeta de presentación usando React"
               to="/ej2.1"
             />
           </div>
           <div className="col">
             <Card
-              title=" Ejercicio 2.2 - Portafolio Modular"
-              text="El ejercicio 2.2 consiste en crear un portafolio modular en React utilizando varios componentes dentro del mismo
-               archivo. El objetivo es practicar la reutilización de componentes especializados y el renderizado dinámico de listas
-                  a partir de datos."
+              titulo=" Ejercicio 2.2 - Portafolio Modular"
+              text="Crear un portafolio modular"
               to="/ej2.2"
             />
           </div>
           <div className="col">
             <Card
-              title="Ejercicio 2.3: Sistema de Componentes Anidados"
-              text="El ejercicio 2.3 avanzado. Consiste en crear un sistema de componentes anidados en React. 
-              El proyecto debe lograr al menos seis niveles de anidación, demostrando comunicación y estructura compleja entre componentes."
+              titulo="Ejercicio 2.3: Sistema de Componentes Anidados"
+              text="Crear un sistema de componentes anidados en React."
               to="/ej2.3"
+            />
+          </div>
+        </div>
+        <div className="row">
+          <Titulo titulo="JSX" />
+          <div className="col">
+            <Card
+              titulo="Ejercicio 3.1: Generador de HTML Dinámico"
+              text="Crear contenido HTML dinámico con JavaScript."
+              to="/ej3.1"
             />
           </div>
         </div>
