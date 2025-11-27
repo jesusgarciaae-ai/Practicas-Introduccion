@@ -4,7 +4,7 @@ import Footer from "../../../Footer";
 import Info from "./AuthorInfo";
 import CommentSection from "./Commet_section";
 import DivisorSeccion from "../../../divisorSeccion";
-import Ej23Cod from "../mostrarCodigos/ejercicio23Cod";
+import Ej23Cod from "../../mostrarCodigos/ejercicio23Cod";
 import { useState } from "react";
 
 const listaRequisitos = [

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import Back from "../../../Back";
 import DivisorSeccion from "../../../divisorSeccion";
-import Ej21Cod from "../mostrarCodigos/ejercicio21Cod";
+import Ej21Cod from "../../mostrarCodigos/ejercicio21Cod";
 import Footer from "../../../Footer";
 
 export const datos = {

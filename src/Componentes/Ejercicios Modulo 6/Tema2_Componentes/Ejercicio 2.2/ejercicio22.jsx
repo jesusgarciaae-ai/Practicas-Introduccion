@@ -7,7 +7,7 @@ import { useState } from "react";
 
 import DivisorSeccion from "../../../divisorSeccion";
 import Footer from "../../../Footer";
-import Ej22Cod from "../mostrarCodigos/ejercicio22Cod";
+import Ej22Cod from "../../mostrarCodigos/ejercicio22Cod";
 
 const NavBar = ({ setComponente }) => {
   const handleClick = (nomComponente) => (e) => {

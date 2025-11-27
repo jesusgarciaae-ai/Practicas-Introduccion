@@ -1,10 +1,8 @@
-import Back from "../../../Back";
-import DivisorSeccion from "../../../divisorSeccion";
-import Footer from "../../../Footer";
-import Ej31Cod from "../../mostrarCodigos/ejercicio32Cod";
-import { useState } from "react";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const peliculas = [
+const Ej31Cod = () => {
+  const array = `const peliculas = [
   {
     titulo: "El Padrino",
     año: 1972,
@@ -41,16 +39,9 @@ const peliculas = [
     descrip:
       "Un asesino recuerda haber participado en el asesinato de Jimmy Hoffa.",
   },
-];
-
-const requisitos = [
-  "Crea una lista de tus 5 películas favoritas usando un array",
-  "Muestra cada película con su año de lanzamiento",
-  "Calcula y muestra el promedio de años de las películas",
-  "Usa etiquetas JSX autocerrantes como <br /> y <hr />",
-];
-
-const Ej31 = () => {
+];`;
+  const codigo = `
+    const Ej31 = () => {
   const [codigo, setCodigo] = useState(false);
 
   const verCodigo = () => {
@@ -91,7 +82,7 @@ const Ej31 = () => {
         </p>
         <button
           onClick={verCodigo}
-          className={`btn btn-${codigo ? "secondary" : "primary"}`}
+          className={btn btn-codigo ? "secondary" : "primary"}}
         >
           {codigo ? "Ocultar Código" : "Ver Código"}
         </button>
@@ -101,14 +92,26 @@ const Ej31 = () => {
           </div>
         )}
       </div>
-      <br />
-      <Footer
-        titulo="Ejercicio 3.1"
-        descripcion="Consiste en generar contenido HTML dinámico usando JSX a partir de un arreglo de 5 películas con su año de lanzamiento. El objetivo es practicar cómo combinar JavaScript y JSX para renderizar información de forma dinámica en React."
-        requisitos={requisitos}
-      />
     </>
   );
 };
+`;
+  return (
+    <div className="row">
+      <div className="col">
+        <p className="fs-3 fw-bold">Array</p>
+        <SyntaxHighlighter language="jsx" style={oneDark}>
+          {array}
+        </SyntaxHighlighter>
+      </div>
+      <div className="col">
+        <p className="fs-3 fw-bold">Código</p>
+        <SyntaxHighlighter language="jsx" style={oneDark}>
+          {codigo}
+        </SyntaxHighlighter>
+      </div>
+    </div>
+  );
+};
 
-export default Ej31;
+export default Ej31Cod;
