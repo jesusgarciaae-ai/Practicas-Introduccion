@@ -1,8 +1,10 @@
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import Back from "../../../Back";
+import DivisorSeccion from "../../../divisorSeccion";
+import Footer from "../../../Footer";
+import { useState } from "react";
+import Ej32Cod from "../../mostrarCodigos/ejercicio32Cod";
 
-const Ej32Cod = () => {
-  const array = `const libros = [
+const libros = [
   {
     titulo: "Cien años de soledad",
     autor: "Gabriel García Márquez",
@@ -35,8 +37,14 @@ const Ej32Cod = () => {
     genero: "Ciencia ficción",
   },
 ];
-`;
-  const codigo = `
+
+const requisitos = [
+  "Crea un array de objetos con información de libros (título, autor, páginas, género)",
+  "Muestra cada libro evitando el error Objects are not valid as React children",
+  "Calcula estadísticas: total de páginas, promedio de páginas, género más común",
+  "Implementa un sistema de recomendaciones basado en géneros",
+];
+
 const Ej32 = () => {
   const pagTotales = libros.reduce((num, p) => num + p.paginas, 0);
   const pagProm = Math.round(
@@ -90,9 +98,21 @@ const Ej32 = () => {
         <p className="fs-5">Páginas totales: {pagTotales}</p>
         <p className="fs-5">Promedio de páginas: {pagProm}</p>
         <p className="fs-5">El genero mas común es: {generoComun}</p>
-        <div className="text-light bg-primary p-1 rounded text-center">
+        <div className="text-light bg-success p-1 rounded text-center">
           <p className="fs-5">Te recomendamos el libro: {libros[4].titulo}</p>
         </div>
+        <br />
+        <button
+          onClick={verCodigo}
+          className={`btn btn-${codigo ? "secondary" : "primary"}`}
+        >
+          {codigo ? "Ocultar Código" : "Ver Código"}
+        </button>
+        {codigo && (
+          <div className="codigo">
+            <Ej32Cod />
+          </div>
+        )}
       </div>
       <br />
       <Footer
@@ -105,19 +125,5 @@ const Ej32 = () => {
     </>
   );
 };
-`;
-  return (
-    <>
-      <p className="fs-3 fw-bold">Array</p>
-      <SyntaxHighlighter language="jsx" style={oneDark}>
-        {array}
-      </SyntaxHighlighter>
-      <p className="fs-3 fw-bold">Código</p>
-      <SyntaxHighlighter language="jsx" style={oneDark}>
-        {codigo}
-      </SyntaxHighlighter>
-    </>
-  );
-};
 
-export default Ej32Cod;
+export default Ej32;

@@ -80,6 +80,13 @@ const Menu = () => {
               to="/ej3.1"
             />
           </div>
+          <div className="col">
+            <Card
+              titulo="Ejercicio 3.2: Procesador de Datos Complejos"
+              text="Maneja objetos y arrays complejos en JSX de forma segura."
+              to="/ej3.2"
+            />
+          </div>
         </div>
       </div>
     </div>

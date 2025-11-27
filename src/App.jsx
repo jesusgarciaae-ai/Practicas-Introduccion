@@ -4,6 +4,7 @@ import Ej21 from "./Componentes/Ejercicios Modulo 6/Tema2_Componentes/Ejercicio 
 import Ej22 from "./Componentes/Ejercicios Modulo 6/Tema2_Componentes/Ejercicio 2.2/ejercicio22";
 import Ej23 from "./Componentes/Ejercicios Modulo 6/Tema2_Componentes/Ejercicio 2.3/indexEj23";
 import Ej31 from "./Componentes/Ejercicios Modulo 6/Tema3_JSX/Ejercicio 3.1/indexEj31";
+import Ej32 from "./Componentes/Ejercicios Modulo 6/Tema3_JSX/Ejercicio 3.2/indexEj32";
 
 import Menu from "./Componentes/Ejercicios Modulo 6/Tema1_Introducción";
 import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/ej2.2" element={<Ej22 />} />
         <Route path="/ej2.3" element={<Ej23 />} />
         <Route path="/ej3.1" element={<Ej31 />} />
+        <Route path="/ej3.2" element={<Ej32 />} />
       </Routes>
     </BrowserRouter>
   );
