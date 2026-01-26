@@ -87,6 +87,13 @@ const Menu = () => {
               to="/ej3.2"
             />
           </div>
+          <div className="col">
+            <Card
+              titulo="Ejercicio 3.3: Renderizador Condicional Avanzado"
+              text="Crea un sistema complejo de renderizado condicional con JSX."
+              to="/ej3.3"
+            />
+          </div>
         </div>
       </div>
     </div>

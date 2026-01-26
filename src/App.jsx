@@ -8,6 +8,7 @@ import Ej32 from "./Componentes/Ejercicios Modulo 6/Tema3_JSX/Ejercicio 3.2/inde
 
 import Menu from "./Componentes/Ejercicios Modulo 6/Tema1_Introducción";
 import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+import Ej33 from "./Componentes/Ejercicios Modulo 6/Tema3_JSX/Ejercicio 3.3/indexEj33";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/ej2.3" element={<Ej23 />} />
         <Route path="/ej3.1" element={<Ej31 />} />
         <Route path="/ej3.2" element={<Ej32 />} />
+        <Route path="/ej3.3" element={<Ej33 />} />
       </Routes>
     </BrowserRouter>
   );
