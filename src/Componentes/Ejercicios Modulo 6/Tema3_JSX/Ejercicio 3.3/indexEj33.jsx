@@ -3,19 +3,14 @@ import DivisorSeccion from "../../../divisorSeccion";
 import Footer from "../../../Footer";
 import { useState, useEffect } from "react";
 
+import Ej33Cod from "../../mostrarCodigos/ejercicio33Cod";
+
 const temperatura = 9;
 const alertas = [];
 const tiempo = new Date();
 
 const hours = tiempo.getHours().toString().padStart(2, "0");
 const minutes = tiempo.getMinutes().toString().padStart(2, "0");
-
-const requisitos = [
-  "Sistema de clima que muestre diferentes componentes según la hora",
-  "Renderizado condicional basado en múltiples variables",
-  "Uso de operadores ternarios anidados y operador &&",
-  "Manejo de arrays vacíos y valores null/undefined",
-];
 
 const Clima = () => {
   return (
@@ -45,7 +40,19 @@ const Clima = () => {
     </div>
   );
 };
+
+const requisitos = [
+  "Sistema de clima que muestre diferentes componentes según la hora",
+  "Renderizado condicional basado en múltiples variables",
+  "Uso de operadores ternarios anidados y operador &&",
+  "Manejo de arrays vacíos y valores null/undefined",
+];
 const Ej33 = () => {
+  const [codigo, setCodigo] = useState(false);
+
+  const verCodigo = () => {
+    setCodigo(!codigo);
+  };
   return (
     <>
       <div className="container">
@@ -57,7 +64,20 @@ const Ej33 = () => {
           </div>
           <div></div>
         </div>
+        <br />
+        <button
+          onClick={verCodigo}
+          className={`btn btn-${codigo ? "secondary" : "primary"}`}
+        >
+          {codigo ? "Ocultar Código" : "Ver Código"}
+        </button>
+        {codigo && (
+          <div className="codigo">
+            <Ej33Cod />
+          </div>
+        )}
       </div>
+
       <br />
       <Footer
         titulo="Ejercicio 3.2"
